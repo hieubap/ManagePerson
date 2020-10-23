@@ -1,2 +1,4 @@
 tao lai xoa lan 2 commit cua thang hieu
+hiếu commit lại sau khi anh tuấn xóa commit đầu tiên
+
 
