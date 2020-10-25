@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Update Person</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<h1>Update a Person:</h1>
+
+<form th:action="@{/put/{id}(id=${personForm.get_ID()})}" th:object="${personForm}" method="post">
+    Name:
+    <input type="text" th:field="*{name}"/>
+    <br/>
+    Age:
+    <input type="text" th:field="*{age}" />
+    <br/>
+    Email:
+    <input type="text" th:field="*{email}" />
+
+    <br>
+    <input type="submit" value="Update" />
+</form>
+
+<br/>
+
+<!-- Check if errorMessage is not null and not empty -->
+
+<!--<div th:if="${errorMessage}" th:utext="${errorMessage}"-->
+<!--     style="color:red;font-style:italic;">-->
+<!--    ...-->
+<!--</div>-->
+
+</body>
+</html>
